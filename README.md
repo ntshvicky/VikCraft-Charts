@@ -309,3 +309,11 @@ new VikCraft3D(document.getElementById('bar3dChartContainer'), {
 
 ## 🤝 Contributing
 Contributions are welcome! If you have suggestions for new chart types, features, or improvements, please feel free to open an issue or submit a pull request.
+
+
+---
+
+## 📜 License
+
+This project is developed by **Nitish Srivastava** and open-source.
+
