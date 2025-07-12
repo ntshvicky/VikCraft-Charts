@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VikCraft.js - Custom Chart Library</title>
+    
+    <link rel="stylesheet" href="vikcraft-chart.css">
+
+</head>
+<body>
+    <header class="vc-main-header">
+        <h1>VikCraft.js Chart Examples</h1>
+        <p>A custom, lightweight charting library.</p>
+    </header>
+
+      <h2 style="text-align: center;">2D Chart Examples</h2>
+
+    <main class="vc-chart-grid">
+        <div class="vc-chart-card">
+            <h3>Bar Chart</h3>
+            <div id="barChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Stacked Bar Chart</h3>
+            <div id="stackedBarChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Multi-Series Bar Chart</h3>
+            <div id="multiSeriesBarChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>100% Stacked Bar Chart</h3>
+            <div id="stackedBar100Chart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Drill-Down Bar Chart</h3>
+            <div id="drilldownChartContainer" class="vc-chart-container"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Horizontal Bar Chart</h3>
+            <div id="horizontalBarChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Horizontal Stacked Bar Chart</h3>
+            <div id="horizontalStackedBarChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Horizontal Grouped Bar Chart</h3>
+            <div id="horizontalGroupedBarChart"></div>
+        </div>
+
+
+        <div class="vc-chart-card">
+            <h3>Line Chart</h3>
+            <div id="lineChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Dashed Line Chart</h3>
+            <div id="dashedLineChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Spline (Curved) Chart</h3>
+            <div id="splineChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Multi-Series Line Chart</h3>
+            <div id="multiSeriesLineChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Combo (Bar & Line) Chart</h3>
+            <div id="comboChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Pie Chart</h3>
+            <div id="pieChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Doughnut Chart</h3>
+            <div id="doughnutChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Area Chart</h3>
+            <div id="areaChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Stacked Area Chart</h3>
+            <div id="stackedAreaChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>100% Stacked Area Chart</h3>
+            <div id="stackedArea100Chart"></div>
+        </div>
+        
+        <div class="vc-chart-card">
+            <h3>Funnel Chart</h3>
+            <div id="funnelChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Pyramid Chart</h3>
+            <div id="pyramidChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Candlestick Chart</h3>
+            <div id="candlestickChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Scatter Chart</h3>
+            <div id="scatterChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Bubble Chart</h3>
+            <div id="bubbleChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Waterfall Chart</h3>
+            <div id="waterfallChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Box & Whisker Chart</h3>
+            <div id="boxAndWhiskerChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Radar Chart</h3>
+            <div id="radarChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Filled Multi-Series Radar</h3>
+            <div id="filledRadarChart"></div>
+        </div>
+
+
+        <div class="vc-chart-card">
+            <h3>OHLC Chart</h3>
+            <div id="ohlcChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Nightingale Rose Chart</h3>
+            <div id="nightingaleChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Thermometer Chart</h3>
+            <div id="thermometerChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Vertical Gauge</h3>
+            <div id="verticalGaugeChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Horizontal Gauge</h3>
+            <div id="horizontalGaugeChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>Radial Gauge</h3>
+            <div id="radialGaugeChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Heatmap</h3>
+            <div id="heatmapChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Mixed Box Plot (with Outliers)</h3>
+            <div id="mixedBoxPlotChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Hollow Candlestick Chart</h3>
+            <div id="hollowCandlestickChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Grouped Radial Bar Chart</h3>
+            <div id="radialBarChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Treemap</h3>
+            <div id="treemapChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Sunburst Chart</h3>
+            <div id="sunburstChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Stacked Bar + Area Combo</h3>
+            <div id="stackedComboChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Stacked Bar + Area + Line Combo</h3>
+            <div id="advancedComboChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Radar + Nightingale Combo</h3>
+            <div id="radarNightingaleChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>Chart Transformation (Bar to Pie)</h3>
+            <div id="transformChartContainer" class="vc-chart-container"></div>
+        </div>
+
+        <!-- 3D Chart -->
+        <div class="vc-chart-card">
+            <h3>3D Bar Chart</h3>
+            <div id="bar3dChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>3D Multi-Series Bar Chart</h3>
+            <div id="multiBar3dChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>3D Horizontal Bar Chart</h3>
+            <div id="horizontalBar3dChart"></div>
+        </div>
+
+        <div class="vc-chart-card">
+            <h3>3D Bar + 2D Line Combo</h3>
+            <div id="mixed3dChart"></div>
+        </div>
+
+        
+        <hr/>
+        <div class="vc-chart-card" style="width: 750px;">
+            <h3>Organization Chart</h3>
+            <div id="orgChartContainer" class="vc-chart-container"></div>
+        </div>
+        <br/>
+
+        <div class="vc-chart-card" style="width: 750px;">
+            <h3>Flow Chart</h3>
+            <div id="flowChartContainer" class="vc-chart-container"></div>
+        </div>
+
+    </main>
+
+    
+    <script src="vikcraft-chart.js"></script>
+    <script src="App.js"></script> 
+
+    <hr/>
+    
+    <h2 style="text-align: center;">3D Chart Examples</h2>
+    <style>
+    
+        /* Ensure canvas in 3D chart cards fills the container */
+        #scatter3dChart {
+            flex-grow: 1;
+            height: 400px; /* Give 3D charts a bit more space */
+        }
+        #scatter3dChart canvas {
+            display: block;
+        }
+
+        #line3dChartContainer {
+            flex-grow: 1;
+            height: 400px;
+        }
+        #line3dChartContainer canvas {
+            display: block;
+        }
+
+        #pie3dChartContainer {
+            flex-grow: 1;
+            height: 400px;
+        }
+        #pie3dChartContainer canvas {
+            display: block;
+        }
+    </style>
+    <main class="vc-chart-grid">
+        <div class="vc-chart-card">
+            <h3>3D Scatter Plot</h3>
+            <div id="scatter3dChart"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>3D Bar Chart</h3>
+            <div id="bar3dChartContainer"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>3D Line / Spline Chart</h3>
+            <div id="line3dChartContainer"></div>
+        </div>
+        <div class="vc-chart-card">
+            <h3>3D Pie Chart</h3>
+            <div id="pie3dChartContainer"></div>
+        </div>
+    </main>
+
+
+    <!-- Import threejs Map for 3D Charts -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="vikcraft-chart-3d.js"></script>
+    <script type="module" src="App3D.js"></script>
+</body>
+</html>

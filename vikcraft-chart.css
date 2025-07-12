@@ -1,0 +1,126 @@
+/* vikcraft-chart.css - Final Corrected Version */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+}
+
+.vc-main-header {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.vc-main-header h1 {
+    margin: 0;
+    color: #1a237e;
+}
+
+.vc-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* This is key: it tells grid cells not to stretch vertically */
+    align-items: start; 
+}
+
+.vc-chart-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* REMOVED height: 100% which caused the stretching issue */
+}
+
+.vc-chart-card h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Base container for all chart canvases/wrappers */
+.vc-chart-card > div {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    display: flex; /* Use flex to make the direct child (canvas) grow */
+    flex-grow: 1;
+}
+
+/* Taller container for 3D charts */
+.vc-chart-card > .vikcraft-3d-wrapper {
+    min-height: 400px;
+}
+
+/* Wrapper for charts with navigation or multiple layers */
+.vc-chart-container,
+.vikcraft-3d-wrapper {
+    position: relative;
+    width: 100%;
+    flex-grow: 1; /* Make the wrapper itself grow */
+    display: flex; /* Make the canvas inside the wrapper grow */
+    /* REMOVED height: 100% which was problematic */
+}
+
+/* Ensure the canvas element fills its container */
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.vc-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -115%);
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.vc-back-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+}
+
+.vikcraft-3d-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vikcraft-3d-label {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 2px white;
+}
